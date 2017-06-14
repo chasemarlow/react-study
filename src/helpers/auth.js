@@ -9,7 +9,6 @@ export function authFacebook () {
   var provider = new firebaseAuth.FacebookAuthProvider()
   return firebaseAuth().signInWithPopup(provider)
     .then(function(result) {
-      console.log(result);
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       var token = result.credential.accessToken;
       // The signed-in user info.

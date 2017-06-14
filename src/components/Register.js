@@ -14,14 +14,11 @@ export default class Register extends Component {
     auth(this.email.value, this.pw.value)
       .catch(e => this.setState(setErrorMsg(e)))
   }
-  facebookLogin = () => {
-    authFacebook()
-  }
   render () {
     return (
       <div className="col-sm-6 col-sm-offset-3">
         <h1>Register</h1>
-        <button onClick={this.facebookLogin}>Login with Facebook</button>
+        <button onClick={authFacebook}>Login with Facebook</button>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email</label>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { login, resetPassword } from '../helpers/auth'
+import { login, resetPassword, authFacebook } from '../helpers/auth'
 
 function setErrorMsg(error) {
   return {
@@ -25,6 +25,7 @@ export default class Login extends Component {
     return (
       <div className="col-sm-6 col-sm-offset-3">
         <h1> Login </h1>
+        <button onClick={authFacebook}>Login with Facebook</button>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email</label>
